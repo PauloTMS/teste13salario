@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>Décimo Terceiro | Sobre</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/geral.css">
 	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" href="bower_components/wow/css/libs/animate.css">
 	<link rel="stylesheet" href="css/sobre.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
-<body>
-	<header>
-		<div class="container">
-			<div class="logo">
-				<a href="index.html">
-					<img src="images/logo-tag-topo.svg" alt="Logo Topo Tag">
-				</a>
-			</div>
-			<div class="links">
-				<nav>
-					<ul>
-						<li><a href="index.html">Início</a></li>
-						<li><a href="sobre.html">Sobre</a></li>
-						<li><a href="portfolio.html">Portfolio</a></li>
-						<li><a href="contato.html">Contato</a></li>
-					</ul>
-				</nav>
-				<ul class="social">
-					<li>
-						<a href="#"><i class="fa fa-facebook"></i></a>
-					</li>
 
-					<li>
-						<a href="#"><i class="fa fa-github-alt"></i></a>
-					</li>
-				</ul>
-			</div>
-			<h1><strong>Sobre o projeto</strong></h1>
-		</div>
-	</header>
+<body>
+	<nav class="menu-responsivo">
+			<ul>
+				<li><a href="index.html">Início</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="calculadora.html">Calculadora</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+		</nav>
+
+		<div class="layout">
+			<header>
+				<div class="container">
+
+					<div class="links">
+						<nav>
+							<ul>
+								<li><a href="index.html">Início</a></li>
+								<li><a href="sobre.html">Sobre</a></li>
+								<li><a href="calculadora.html">Calculadora</a></li>
+								<li><a href="contato.html">Contato</a></li>
+							</ul>
+						</nav>
+
+						<a class="toggle" href="javascript:;">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+
+						<ul class="social">
+							<li class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+							</li>
+
+							<li class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+								<a href="#"><i class="fab fa-twitter"></i></a>
+							</li>
+						</ul>
+					</div>
+
+					<h1><strong>Sobre o Projeto</strong></h1>
+				</div>
+
+			</header>
 	<main>
 		<section class="sobre">
 			<div class="container">
 				<div class="textos">
-					<p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit. Aut in laborum, quos corrupti omnis ipsum reiciendis? Aspernatur, sequi eius! Nobis veniam eius autem dolores, doloribus deserunt est ex ea voluptatem.</p>
+					<p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit. Aut in laborum, quos corrupti omnis ipsum reiciendis? Aspernatur, sequi eius! Nobis veniam eius autem dolores, doloribus deserunt est ex ea voluptatem.</p><br><br>
 				</div>
 
-				<ul class="habilidades">
-					<li class="habilidade-8">
-						<h2>
-							<i class="fa fa-html5"></i> <strong>HTML5</strong> // 80%
-							<div class="barra"><span></span></div>
-						</h2>
-					</li>
-					<li class="habilidade-5">
-						<h2>
-							<i class="fa fa-css3"></i> <strong>CSS3</strong> // 50%
-							<div class="barra"><span></span></div>
-						</h2>
-					</li>
-					<li class="habilidade-7">
-						<h2>
-							<i class="fa fa-wordpress"></i> <strong>Wordpress</strong> // 70%
-							<div class="barra"><span></span></div>
-						</h2>
-					</li>
-					<li class="habilidade-9">
-						<h2>
-							<i class="fa fa-git"></i> <strong>Git</strong> // 30%
-							<div class="barra"><span></span></div>
-						</h2>
-					</li>
-				</ul>
-				<a href="portfolio.html" class="botao medio"><i class="fa fa-picture-o"></i> Acessar Portfolio</a>
+				
+				<a href="portfolio.html" class="botao medio"><i class="fas fa-calculator"></i> Acessar a calculadora</a>
 			</div>
 		</section>
 	</main>
 	
 	<footer>
 		<div class="logo-rodape">
-			<a href="https://thiagoagdev.com/">
-				<img src="images/logo-tag-rodape.svg" alt="Logo TAG Rodapé">
-			</a>
-			<p>2017 Todos os Direitos Reservados</p>
+			<img src="images/us-dollar.png" alt="Logo Rodapé">
+			<p>2018 - Todos os Direitos Reservados.</p>
 		</div>
 		
 	</footer>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/wow/dist/wow.min.js"></script>
+	<script>
+		$(function () {
+			$('.toggle').click(function () {
+				$('.layout').toggleClass('ativo');
+				$('.menu-responsivo').toggleClass('ativo');
+				$(this).toggleClass('ativo');
+			});
+			new WOW().init();
+		});
+	</script>
 </body>
+
 </html>
